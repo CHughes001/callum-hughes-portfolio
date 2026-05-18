@@ -41,7 +41,7 @@ export default function Hero() {
 
           <div className="mt-6 max-w-xl space-y-4 font-['Inter',sans-serif] text-[0.98rem] leading-[1.65] text-[var(--body-text)] max-[640px]:text-[0.93rem]">
             <p className="m-0 text-pretty">
-              I&apos;m a London-based analyst with a background in Mechanical
+              I&apos;m an analyst with a background in Mechanical
               Engineering and Engineering for International Development (MSc,
               Distinction, UCL).
             </p>

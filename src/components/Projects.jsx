@@ -3,40 +3,28 @@ import ProjectCard from './ProjectCard.jsx'
 
 const PROJECTS = [
   {
-    title: 'GB Power Market Dashboard',
-
+    title: 'GB Power Market Analytics Pipeline',
+    image: '/projects/gb-power-market/market-regime-full.png',
+    caseStudyTo: '/projects/gb-power-market',
     description: (
       <>
         <p className="m-0">
-          End-to-end analytics dashboard for the GB electricity market,
-          combining BMRS-sourced operational data with curated SQL views
-          and Power BI reporting layers.
+          End-to-end BMRS → SQLite → Power BI pipeline preserving settlement-period
+          granularity and trader-relevant spread metrics.
         </p>
-
         <p className="m-0">
-          Built to support repeatable analysis of system prices,
-          generation mix, balancing dynamics, renewable penetration,
-          and settlement-period performance across the GB power system.
+          Quantifies how wind penetration suppresses CCGT clean spark spreads and drives
+          intraday balancing price volatility — April 2026 sample.
         </p>
       </>
     ),
-
     techStack: ['Python', 'SQL', 'Power BI', 'BMRS API'],
-
     outcomes: [
-      'Consolidated BMRS and derived metrics into analysis-ready datasets for trading and operations stakeholders.',
-      'Reduced manual reporting time through reusable SQL views and refreshable reporting workflows.',
-      'Enabled comparison of renewable penetration against imbalance pricing and system stress events.',
+      '£65/MWh CSS swing between high and medium wind days from live market data.',
+      '63 negative SBP periods surfaced at SP resolution — invisible in daily averages.',
+      'Modular pipeline: staging, transformation, and star-schema serving for Power BI.',
     ],
-
     githubUrl: 'https://github.com/CHughes001/',
-
-    screenshots: [
-      '/projects/power-market/dashboard-overview.png',
-      '/projects/power-market/spread-analysis.png',
-      '/projects/power-market/wind-forecast.png',
-      '/projects/power-market/imbalance-analysis.png',
-    ],
   },
 ]
 
@@ -53,34 +41,16 @@ export default function Projects() {
         transition={{ duration: 0.28, ease: 'easeOut' }}
       >
         <h2 className="m-0 font-['Cormorant_Garamond',serif] text-4xl font-semibold tracking-tight text-[var(--primary-title)] max-[640px]:text-[1.85rem]">
-          Market & Analytics Projects
+          Selected analytics projects
         </h2>
-
         <p className="mt-3 max-w-2xl font-['Inter',sans-serif] text-[0.98rem] leading-relaxed text-[var(--body-text)] max-[640px]:text-[0.93rem]">
-          Selected work spanning GB power markets, data engineering,
-          commercial analytics, and reporting systems — designed to be
-          credible in front of trading, operations, and strategy teams.
+          Work designed to show data engineering and commercial analytics skills. 
         </p>
       </motion.div>
 
-      <div
-        className="
-          mt-12
-          grid
-          max-w-[760px]
-          mx-auto
-          grid-cols-1
-          gap-8
-          max-[640px]:mt-10
-          max-[640px]:gap-6
-        "
-      >
+      <div className="mx-auto mt-12 grid max-w-[760px] grid-cols-1 gap-8 max-[640px]:mt-10 max-[640px]:gap-6">
         {PROJECTS.map((project, index) => (
-          <ProjectCard
-            key={project.title}
-            {...project}
-            index={index}
-          />
+          <ProjectCard key={project.title} {...project} index={index} />
         ))}
       </div>
     </section>

@@ -1,5 +1,3 @@
-import Accordion from './Accordion.jsx'
-
 const SKILL_GROUPS = [
   {
     title: 'Data & Analytics',

@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 
 export default function ProjectCard({
   image,
@@ -8,6 +9,7 @@ export default function ProjectCard({
   outcomes = [],
   tags = [],
   link,
+  caseStudyTo,
   githubUrl,
   embed,
   index = 0,
@@ -85,6 +87,14 @@ export default function ProjectCard({
       ) : null}
 
       <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 border-t border-[var(--line-soft)] pt-5">
+        {caseStudyTo ? (
+          <Link
+            to={caseStudyTo}
+            className="inline-flex items-center gap-1 rounded-sm bg-[var(--action-colour)] px-4 py-2 font-['Inter',sans-serif] text-sm font-semibold text-white transition-[transform,background-color] duration-200 hover:-translate-y-px hover:bg-[#8a0309]"
+          >
+            Read case study
+          </Link>
+        ) : null}
         {link && (!githubUrl || link !== githubUrl) ? (
           <a
             href={link}

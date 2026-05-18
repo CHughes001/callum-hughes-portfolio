@@ -3,7 +3,7 @@
 :root {
   --primary-title: #52414c;
   --body-text: #596157;
-  --accent-link: #005f73;
+  --accent-link: #0a6c7a;
   --background-base: #f4f1ee;
   --action-colour: #6a040f;
   --line-soft: rgba(82, 65, 76, 0.15);
@@ -56,4 +56,31 @@ a:hover {
 
 #root {
   min-height: 100svh;
+}
+
+.case-study-hero {
+  background: color-mix(in srgb, var(--background-base) 94%, #fff);
+}
+
+.case-study-hero__grid {
+  background-image:
+    linear-gradient(rgba(82, 65, 76, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(82, 65, 76, 0.04) 1px, transparent 1px);
+  background-size: 28px 28px;
+  mask-image: radial-gradient(ellipse 80% 70% at 50% 40%, #000 20%, transparent 75%);
+}
+
+.case-study-hero__glow {
+  animation: case-study-glow 8s ease-in-out infinite alternate;
+}
+
+@keyframes case-study-glow {
+  from {
+    opacity: 0.5;
+    transform: translate(0, 0);
+  }
+  to {
+    opacity: 0.85;
+    transform: translate(-12px, 8px);
+  }
 }

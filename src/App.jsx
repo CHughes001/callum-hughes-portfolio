@@ -1,20 +1,20 @@
-import Header from './components/Header.jsx'
-import Hero from './components/Hero.jsx'
-import Projects from './components/Projects.jsx'
-import About from './components/About.jsx'
-import Footer from './components/Footer.jsx'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import HomePage from './pages/HomePage.jsx'
+import GBPowerMarketCaseStudyPage from './pages/GBPowerMarketCaseStudyPage.jsx'
 
 function App() {
   return (
-    <div className="min-h-svh bg-[var(--background-base)] text-[var(--body-text)] antialiased">
-      <Header />
-      <main className="pb-2">
-        <Hero />
-        <Projects />
-        <About />
-      </main>
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <div className="min-h-svh bg-[var(--background-base)] text-[var(--body-text)] antialiased">
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route
+            path="/projects/gb-power-market"
+            element={<GBPowerMarketCaseStudyPage />}
+          />
+        </Routes>
+      </div>
+    </BrowserRouter>
   )
 }
 
