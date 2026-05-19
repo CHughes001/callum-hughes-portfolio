@@ -5,11 +5,13 @@ import {
   STAR_SCHEMA,
 } from '../../../data/gbPowerMarketCaseStudy.js'
 import CaseStudySection from '../shared/CaseStudySection.jsx'
+import ImageLightbox from '../shared/ImageLightbox.jsx'
 
 const ARCH_IMAGE = '/projects/gb-power-market/architecture.png'
 
 export default function CaseStudyArchitecture() {
   const [archSrc, setArchSrc] = useState(ARCH_IMAGE)
+  const [lightboxImage, setLightboxImage] = useState(null)
 
   return (
     <CaseStudySection
@@ -20,7 +22,17 @@ export default function CaseStudyArchitecture() {
       tinted
     >
       <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
-        <div className="overflow-hidden rounded-md border border-[var(--line-soft)] bg-white shadow-[0_2px_12px_rgba(82,65,76,0.08)]">
+        {/* CLICKABLE IMAGE */}
+        <div
+          className="overflow-hidden rounded-md border border-[var(--line-soft)] bg-white shadow-[0_2px_12px_rgba(82,65,76,0.08)] cursor-zoom-in"
+          onClick={() =>
+            setLightboxImage({
+              src: archSrc,
+              alt: "Pipeline architecture diagram — BMRS API to SQLite to Power BI",
+            })
+          }
+          
+        >
           <img
             src={archSrc}
             alt="Pipeline architecture diagram — BMRS API to SQLite to Power BI"
@@ -35,10 +47,11 @@ export default function CaseStudyArchitecture() {
             }
           />
           <p className="m-0 border-t border-[var(--line-soft)] px-4 py-2 font-['IBM_Plex_Mono',monospace] text-[0.68rem] text-[var(--body-text)]">
-            Pipeline diagram
+            Pipeline diagram (click to expand)
           </p>
         </div>
 
+        {/* RIGHT SIDE CONTENT */}
         <div className="space-y-8">
           <div>
             <p className="m-0 font-['IBM_Plex_Mono',monospace] text-[0.65rem] uppercase tracking-[0.14em] text-[var(--primary-title)]">
@@ -87,6 +100,7 @@ export default function CaseStudyArchitecture() {
         </div>
       </div>
 
+      {/* SCRIPTS */}
       <div className="mt-10 border-t border-[var(--line-soft)] pt-8">
         <p className="m-0 font-['IBM_Plex_Mono',monospace] text-[0.65rem] uppercase tracking-[0.14em] text-[var(--primary-title)]">
           Modular scripts
@@ -105,6 +119,9 @@ export default function CaseStudyArchitecture() {
           ))}
         </div>
       </div>
+
+      {/* LIGHTBOX */}
+      <ImageLightbox image={lightboxImage} onClose={() => setLightboxImage(null)} />
     </CaseStudySection>
   )
 }

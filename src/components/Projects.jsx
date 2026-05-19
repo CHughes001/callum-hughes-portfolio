@@ -32,7 +32,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="mx-auto max-w-[1120px] scroll-mt-28 px-5 py-20 max-[900px]:py-16 max-[640px]:scroll-mt-36 max-[640px]:py-14"
+      className="mx-auto max-w-[1120px] scroll-mt-1 px-5 py-20 max-[900px]:py-16 max-[640px]:scroll-mt-36 max-[640px]:py-14"
     >
       <motion.div
         initial={{ opacity: 0, y: 12 }}
@@ -44,7 +44,7 @@ export default function Projects() {
           Selected analytics projects
         </h2>
         <p className="mt-3 max-w-2xl font-['Inter',sans-serif] text-[0.98rem] leading-relaxed text-[var(--body-text)] max-[640px]:text-[0.93rem]">
-          Work designed to show data engineering and commercial analytics skills. 
+          Work designed to show my data engineering and commercial analytics skills. 
         </p>
       </motion.div>
 

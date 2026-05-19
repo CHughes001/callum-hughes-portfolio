@@ -1,3 +1,4 @@
+/* 
 const SKILL_GROUPS = [
   {
     title: 'Data & Analytics',
@@ -27,6 +28,7 @@ const SKILL_GROUPS = [
     ],
   },
 ]
+*/
 
 export default function About() {
   return (
@@ -60,9 +62,9 @@ export default function About() {
       </strong>
       , and{' '}
       <strong className="font-medium text-[var(--primary-title)]">
-        Power BI
+        Power BI.
       </strong>{' '}
-      — building data pipelines, analysing market data, and creating dashboards that
+        Building data pipelines, analysing market data, and creating dashboards that
       make complex information easier to understand.
     </p>
 
@@ -81,16 +83,7 @@ export default function About() {
     </p>
 
     <p className="m-0 text-pretty">
-      I am motivated by the pace of the{' '}
-      <strong className="font-medium text-[var(--primary-title)]">
-        energy transition
-      </strong>{' '}
-      and the need for transparent analytics that connect physical system
-      realities to market outcomes.
-    </p>
-
-    <p className="m-0 text-pretty">
-      For a fuller professional history, see my{' '}
+      For my professional history, see my{' '}
       <a
         href="https://www.linkedin.com/in/callumhughes0/"
         target="_blank"
@@ -102,19 +95,20 @@ export default function About() {
     </p>
   </div>
 
-  {/* SKILLS */}
+  {/* SKILLS (DISABLED) */}
+  {/*
   <div className="mt-14 w-full border-t border-[var(--line-soft)] pt-10">
     <h3 className="m-0 font-['Cormorant_Garamond',serif] text-2xl font-semibold tracking-tight text-[var(--primary-title)]">
       Skills
     </h3>
-
+    
     <div className="mt-8 grid gap-10">
       {SKILL_GROUPS.map((group) => (
         <div key={group.title}>
           <h4 className="m-0 font-['IBM_Plex_Mono',monospace] text-[0.72rem] font-medium uppercase tracking-[0.14em] text-[var(--primary-title)]">
             {group.title}
           </h4>
-
+        
           <ul className="mt-4 m-0 list-none space-y-3 p-0">
             {group.items.map((item) => (
               <li
@@ -129,6 +123,7 @@ export default function About() {
       ))}
     </div>
   </div>
+  */}
   
 </div>
       </div>

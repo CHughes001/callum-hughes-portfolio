@@ -17,7 +17,7 @@ export default function CaseStudyDashboards() {
       id="cs-dashboards"
       eyebrow="03 · Dashboards"
       title="Three lenses on the same market"
-      lead="Project Overview: three main sections of my PowerBI dashboard."
+      lead="Project Overview: Screenshots of my PowerBI dashboard."
     >
       <div
         role="tablist"

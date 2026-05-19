@@ -9,7 +9,7 @@ export default function CaseStudyInsights() {
       id="cs-insights"
       eyebrow="04 · Key insights"
       title="What the data says"
-      lead="April 2026 sample — illustrative, but commercially legible. The patterns match how desk-adjacent teams read wind, CSS, and SP shape."
+      lead="1st of April to 10th of April 2026 BMRS sample analysing balancing prices, wind penetration, and clean spark spreads across 480 settlement periods."
       tinted
     >
       <div className="grid gap-6 md:grid-cols-3">
@@ -38,8 +38,7 @@ export default function CaseStudyInsights() {
 
       <div className="mt-12 max-w-3xl">
         <CaseStudyPullQuote>
-          CCGTs lost £22/MWh on variable costs across the window — yet medium-wind days flipped
-          clean spark to +£8/MWh. Wind is not background noise; it is the margin story.
+        CCGTs averaged −£22/MWh on variable costs, yet medium‑wind days lifted clean spark to +£8/MWh. Wind helps sets the margin.
         </CaseStudyPullQuote>
       </div>
 

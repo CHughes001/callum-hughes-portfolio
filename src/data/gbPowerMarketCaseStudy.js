@@ -63,12 +63,12 @@ export const DASHBOARD_TABS = [
     label: 'Intraday balancing',
     purpose: 'Settlement-period volatility that daily averages hide.',
     commentary: [
-      'The heatmap displays the range of average system buy price across settlement periods 1-48. Dark blue indicating a higher SBP and deep red the opposite.',
-      'The heatmap exposes a deep red band on 5–6 April across SP25–32 — midday solar on a low-demand weekend pushing SBP negative.',
-      'Filtering to 6 April, the intraday shape drops below zero around 12:30–16:00, confirming oversupply rather than a benign daily average.',
+      'The heatmap displays a midday pricing trough across SP27–32 (13:00–16:00), where average SBP falls to £21–£42/MWh versus evening peaks above £110/MWh in SP39–41.',
+      'Negative pricing is heavily concentrated in the solar-heavy afternoon window. SP32 recorded the highest number of negative settlement periods, while SP30 reached the dataset low at -£97.92/MWh',
+      'Filtering to 5–6 April shows prolonged midday suppression, with prices remaining below zero for multiple consecutive settlement periods as renewable generation outpaced demand and therefore producing an oversupply.',
+      'Settlement-period detail captures volatility and imbalance stress that daily averages hide.',
     ],
-    pullQuote:
-      'SP-level granularity captures system stress and imbalance risk — daily averages are blind to it.',
+    
     images: [
       {
         src: '/projects/gb-power-market/intraday-6april-comb.png',
@@ -92,12 +92,13 @@ export const DASHBOARD_TABS = [
     label: 'Market regime',
     purpose: 'Price levels, clean spark spread, and wind across the sample window.',
     commentary: [
-      'April 5 shows only 16 of 48 periods with positive SBP — 32 half-hours were negative in a single day.',
-      'Shows how wind penetration suppresses balancing prices and how spreads widen during scarcity periods.',
-      'Evening block filter (slicer) contrasts recovery above ~£80/MWh as solar drops and gas demand returns.',
+      'This page connects renewable penetration to price volatility -  a defining relationship for Great Britain’s electricity market.',
+      'The dataset separates into two distinct market regimes: lower-wind days with positive clean spark spreads and high-wind days characterised by suppressed prices and frequent negative settlement periods.',
+      'The 5th of April was the clearest stress event: average SBP fell to £15.50/MWh, with 22 of 48 settlement periods pricing negatively.',
+      'High-wind days (>45% average wind share) averaged £51/MWh SBP and -£33.62/MWh CSS, versus £96/MWh SBP and +£5.20/MWh CSS on low-wind days.',
+      'The evening block highlights how prices recover as solar generation falls and thermal generation returns to the margin, though recovery remained muted on the highest-wind days.'
     ],
-    pullQuote:
-      'This page connects renewable penetration to price volatility — the heartbeat of the GB market.',
+    
     images: [
       {
         src: '/projects/gb-power-market/market-regime-full.png',
@@ -118,9 +119,9 @@ export const DASHBOARD_TABS = [
     commentary: [
       'Unfiltered waterfall: SBP £77 → fuel −64 → carbon −24 → CSS −22/MWh. CCGTs lose on variable costs across the window - Gas is simply expensive relative to the power price',
       'Medium wind days flip CSS to +£8/MWh — a £39/MWh swing from the all-days average, quantifying merit-order suppression.',
+      'Wind regime materially changed the economics. Medium-wind days averaged near break-even CSS, while high-wind days averaged -£33.62/MWh.'
     ],
-    pullQuote:
-      'On medium wind days CCGTs averaged +£8/MWh CSS; on high wind days −£57/MWh — a £65/MWh swing from live data.',
+    
     images: [
       {
         src: '/projects/gb-power-market/trading-economics-full.png',
