@@ -33,7 +33,7 @@ export default function Hero() {
             Callum Hughes
           </h1>
           <p className="mt-3 font-['IBM_Plex_Mono',monospace] text-[0.78rem] font-medium uppercase tracking-[0.16em] text-[var(--primary-title)] max-[640px]:text-[0.72rem]">
-            Energy Market &amp; Data Analyst
+            Data Analyst - Energy &amp; Market Focus 
           </p>
           <p className="mt-1 font-['Inter',sans-serif] text-sm text-[var(--body-text)] opacity-90">
             London
