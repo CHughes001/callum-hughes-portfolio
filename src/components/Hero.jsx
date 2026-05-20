@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 
 const LINKEDIN = 'https://www.linkedin.com/in/callumhughes0/'
-const CV_PATH = 'professional_website/Callum-Hughes-CV.pdf'
+const CV_PATH = 'professional_website/public/Callum_Hughes_CV.pdf'
 
 function scrollToId(id) {
   document.getElementById(id)?.scrollIntoView({
@@ -84,7 +84,7 @@ export default function Hero() {
           >
             <div className="flex h-full flex-col">
   <img
-    src="/bangor_2022.jpg"
+    src="/public/bangor_2022.jpg"
     alt="Near Mount Snowdon, Wales, 2022 — Photo by Callum Hughes"
     className="aspect-[4/5] w-full object-cover"
     width={800}
